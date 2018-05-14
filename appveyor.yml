@@ -13,8 +13,7 @@ before_test:
 
 configuration:
 
-- Debug
-- Release
+- Master 
 
 platform:
 
