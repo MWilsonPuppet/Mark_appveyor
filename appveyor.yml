@@ -29,6 +29,9 @@ environment:
 
   - BUILD_MODE: MSBuild
 
+deploy_script: 
+  - puppet-configure.ps1
+
 # Disable build through solution file
 build: off
 
