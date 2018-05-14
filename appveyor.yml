@@ -2,6 +2,15 @@ version: 1.0.{build}
 clone_depth: 3
 skip_tags: true
 
+install:
+  - set PATH=C:\Ruby22\bin;%PATH%
+  - bundle install
+
+before_test:
+  - ruby -v
+  - gem -v
+  - bundle -v
+
 configuration:
 
 - Debug
@@ -9,14 +18,11 @@ configuration:
 
 platform:
 
-- Win32
 - x64
 
 image:
 
 - Visual Studio 2017
-- Visual Studio 2015
-- Visual Studio 2013
 
 environment:
 
