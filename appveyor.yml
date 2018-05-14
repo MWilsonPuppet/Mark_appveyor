@@ -1,0 +1,12 @@
+version: '1.0.{build}'
+image: 
+  - Visual Studio 2017
+branches:
+  only:
+  - master
+test_script:
+  - ps: Write-Host "common test script"
+  # run the unit tests (requires changing into the test directory)
+on_finish :
+  # any cleanup in here
+deploy: off
