@@ -1,6 +1,4 @@
-$ErrorActionPreference = "Stop"
-
-. C:\Packer\Scripts\windows-env.ps1
+. C:\projects\marktest\windows-env.ps1
 
 Write-Output "Installing Puppet Agent..."
 if ("$ARCH" -eq "x86") {
