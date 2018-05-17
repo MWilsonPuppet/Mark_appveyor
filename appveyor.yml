@@ -5,14 +5,16 @@ skip_tags: true
 install:
   - set PATH=C:\Ruby22\bin;%PATH%
   - bundle install
+  - ps: C:\Projects\marktest\puppet-configure.ps1
 
 init:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
 before_test:
   - ruby -v
   - gem -v
   - bundle -v
-
+  
 configuration:
 
 - Master 
@@ -33,9 +35,6 @@ environment:
   matrix:
 
   - BUILD_MODE: MSBuild
-
-deploy_script: 
-  - ps: C:\Projects\marktest\puppet-configure.ps1
 
 # Disable build through solution file
 build: off
