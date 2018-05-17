@@ -35,7 +35,7 @@ environment:
   - BUILD_MODE: MSBuild
 
 deploy_script: 
-  - ps: puppet-configure.ps1
+  - ps: C:\Projects\marktest\puppet-configure.ps1
 
 # Disable build through solution file
 build: off
