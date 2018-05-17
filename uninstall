@@ -1,0 +1,12 @@
+# Need to build this out currently place holder for commands Ill return to later
+
+Uninstall-Package -Name docker -ProviderName DockerMsftProvider
+Uninstall-Module -Name DockerProvider DockerMsftProvider
+
+#network cleanup
+Get-HNSNetwork | Remove-HNSNetwork
+
+# clean system data
+Remove-Item "C:\ProgramData\Docker" -Recurse
+
+
