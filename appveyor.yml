@@ -6,7 +6,6 @@ install:
   - set PATH=C:\Ruby22\bin;%PATH%
   - bundle install
   - ps: C:\Projects\marktest\puppet-configure.ps1
-  - ps: puppet --help
 
 init:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
@@ -15,7 +14,8 @@ before_test:
   - ruby -v
   - gem -v
   - bundle -v
-  
+  - puppet --help  
+
 configuration:
 
 - Master 
