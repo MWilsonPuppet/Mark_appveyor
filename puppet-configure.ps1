@@ -11,3 +11,4 @@ if ("$ARCH" -eq "x86") {
 Download-File "$PuppetMSIUrl" $PackerDownloads\puppet-agent.msi
 Start-Process -Wait "msiexec" -PassThru -NoNewWindow -ArgumentList "/i $PackerDownloads\puppet-agent.msi /qn /norestart PUPPET_AGENT_STARTUP_MODE=manual"
 Write-Output "Installed Puppet Agent..."
+
