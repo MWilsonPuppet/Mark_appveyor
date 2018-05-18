@@ -14,7 +14,7 @@ before_test:
   - ruby -v
   - gem -v
   - bundle -v
-  - puppet --help  
+  - ps: C:\Users\appveyor\puppet --help
 
 configuration:
 
