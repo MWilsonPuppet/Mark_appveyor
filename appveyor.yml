@@ -3,10 +3,9 @@ clone_depth: 3
 skip_tags: true
 
 install:
-  - set PATH=C:\Ruby22\bin;%PATH%
   - bundle install
   - ps: C:\Projects\marktest\puppet-configure.ps1
-  - ps: iex puppet --help
+  - ps: C:\Projects\marktest\install_module.ps1
 
 init:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
