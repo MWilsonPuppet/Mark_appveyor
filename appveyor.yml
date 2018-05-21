@@ -14,7 +14,6 @@ before_test:
   - ruby -v
   - gem -v
   - bundle -v
-  - ps: C:\Users\appveyor\puppet
 
 configuration:
 
