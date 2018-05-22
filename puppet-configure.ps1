@@ -26,21 +26,30 @@ git checkout -b mihaibuzgau-master master
 git pull https://github.com/mihaibuzgau/puppetlabs-docker.git master
 
 Write-Output "Installing puppetlabs-powershell module..."
-puppet module install puppetlabs-powershell --version 2
+puppet module install puppetlabs-powershell
 
 Write-Output "Installing puppetlabs-reboot module..."
-puppet module install puppetlabs-reboot --version 2.0.0
+puppet module install puppetlabs-reboot
 
 Write-Output "Installing puppetlabs-stdlib"
-puppet module install puppetlabs-stdlib --version 4.13.1
+puppet module install puppetlabs-stdlib
 
 Write-Output "Installing puppetlabs-apt" 
-puppet module install puppetlabs-apt --version 4.5.1
+puppet module install puppetlabs-apt
 
 Write-Output "Installing puppetlabs-translate" 
-puppet module install puppetlabs-translate --version 1.1.0
+puppet module install puppetlabs-translate
 
 #Uninstalling Docker engine as it comes prepackaged with Visualstudio 2017 in AppVeyor
 Write-Output "Uninstall Docker engine..."
 Uninstall-Package -Name docker -ProviderName DockerMsftProvider
 
+#Adding docker to path
+$ENV:PATH="$ENV:PATH;C:\Program Files\Docker Toolbox"
+echo $ENV:PATH
+docker ps
+
+Write-Output "Applying manifest to install docker engine using puppet docker module"
+cd C:\Projects\marktest
+puppet apply --debug docker_install.pp
+docker ps
