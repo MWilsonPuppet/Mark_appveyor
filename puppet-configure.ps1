@@ -20,8 +20,17 @@ cd C:/ProgramData/PuppetLabs/code/environments/production/modules
 git config --global user.name MarkW
 git config --global user.email mark.wilson@puppetlabs.com
 git clone https://github.com/puppetlabs/puppetlabs-docker.git
-cd puppetlabs-docker
+mv puppetlabs-docker docker
+cd docker
 git checkout -b mihaibuzgau-master master
 git pull https://github.com/mihaibuzgau/puppetlabs-docker.git master
 
+Write-Output "Installing puppetlabs-powershell module..."
+puppet module install puppetlabs-powershell --version 2
 
+Write-Output "Installing puppetlabs-reboot module..."
+puppet module install puppetlabs-reboot --version 2.0.0
+
+#Uninstalling Docker engine as it comes prepackaged with Visualstudio 2017 in AppVeyor
+Write-Output "Uninstall Docker engine..."
+Uninstall-Package -Name docker -ProviderName DockerMsftProvider
