@@ -15,6 +15,7 @@ before_test:
   - bundle -v
   - ps: C:\Projects\marktest\apply_install_manifest.ps1
   - ps: Get-WinSystemLocale
+  - ps: Start-sleep -s 400
 
 configuration:
 
