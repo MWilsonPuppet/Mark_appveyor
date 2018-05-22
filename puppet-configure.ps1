@@ -31,6 +31,15 @@ puppet module install puppetlabs-powershell --version 2
 Write-Output "Installing puppetlabs-reboot module..."
 puppet module install puppetlabs-reboot --version 2.0.0
 
+Write-Output "Installing puppetlabs-stdlib"
+puppet module install puppetlabs-stdlib --version 4.13.1
+
+Write-Output "Installing puppetlabs-apt" 
+puppet module install puppetlabs-apt --version 4.5.1
+
+Write-Output "Installing puppetlabs-translate" 
+puppet module install puppetlabs-translate --version 1.1.0
+
 #Uninstalling Docker engine as it comes prepackaged with Visualstudio 2017 in AppVeyor
 Write-Output "Uninstall Docker engine..."
 Uninstall-Package -Name docker -ProviderName DockerMsftProvider
