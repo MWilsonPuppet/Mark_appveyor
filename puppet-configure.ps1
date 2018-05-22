@@ -34,3 +34,4 @@ puppet module install puppetlabs-reboot --version 2.0.0
 #Uninstalling Docker engine as it comes prepackaged with Visualstudio 2017 in AppVeyor
 Write-Output "Uninstall Docker engine..."
 Uninstall-Package -Name docker -ProviderName DockerMsftProvider
+
