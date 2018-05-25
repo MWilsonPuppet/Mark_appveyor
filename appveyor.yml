@@ -7,6 +7,7 @@ install:
   - ps: C:\Projects\marktest\puppet-configure.ps1
   - ps: Restart-Computer -Force
   - PS: Start-Sleep -s 200
+  - PS: docker ps
 
 init:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
@@ -15,7 +16,7 @@ before_test:
   - ruby -v
   - gem -v
   - bundle -v
-  - PS: C:\Projects\marktest\docker_test.ps1
+  - docker ps
 
 configuration:
 
