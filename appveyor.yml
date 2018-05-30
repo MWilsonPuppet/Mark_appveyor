@@ -18,6 +18,9 @@ before_test:
   - bundle -v
   - docker ps
 
+test_script:
+  - bundle exec rake acceptance
+
 configuration:
 
 - Master 
