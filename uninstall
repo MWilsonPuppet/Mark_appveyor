@@ -9,4 +9,4 @@ Get-HNSNetwork | Remove-HNSNetwork
 # clean system data
 Remove-Item "C:\ProgramData\Docker" -Recurse
 
-
+w

@@ -21,9 +21,9 @@ git config --global user.name MarkW
 git config --global user.email mark.wilson@puppetlabs.com
 git clone https://github.com/puppetlabs/puppetlabs-docker.git
 mv puppetlabs-docker docker
-cd docker
-git checkout -b mihaibuzgau-master master
-git pull https://github.com/mihaibuzgau/puppetlabs-docker.git master
+#cd docker
+#git checkout -b mihaibuzgau-master master
+#git pull https://github.com/mihaibuzgau/puppetlabs-docker.git master
 
 Write-Output "Installing puppetlabs-powershell module..."
 puppet module install puppetlabs-powershell
