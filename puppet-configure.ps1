@@ -52,4 +52,4 @@ docker ps
 Write-Output "Applying manifest to install docker engine using puppet docker module"
 cd C:\projects\marktest
 puppet apply --debug docker_install.pp
-#docker ps
+docker ps

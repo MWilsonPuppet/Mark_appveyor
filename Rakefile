@@ -1,4 +1,5 @@
-desc 'mark_test'
+require 'rspec'
+
 task :acceptance do
-  puts "test executing..." 
+  rspec mark_docker_engine_test.rb
 end
