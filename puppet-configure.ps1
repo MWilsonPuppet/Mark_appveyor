@@ -17,11 +17,12 @@ echo $ENV:PATH
 
 Write-Output "Cloning branch"
 cd C:/ProgramData/PuppetLabs/code/environments/production/modules
-git config --global user.name MarkW
-git config --global user.email mark.wilson@puppetlabs.com
+# git config --global user.name MarkW
+# git config --global user.email mark.wilson@puppetlabs.com
 git clone https://github.com/puppetlabs/puppetlabs-docker.git
 mv puppetlabs-docker docker
-#cd docker
+cd docker
+ls -r
 #git checkout -b mihaibuzgau-master master
 #git pull https://github.com/mihaibuzgau/puppetlabs-docker.git master
 
